@@ -1,16 +1,17 @@
 <template>
   <div id="app">
     <navbar />
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </div> -->
     <router-view/>
   </div>
 </template>
 
 <script>
-import navbar from './components/navbar'
+import navbar from './components/navbar';
+import db from './components/firebaseInit';
 export default {
   name: 'app',
   components: {
