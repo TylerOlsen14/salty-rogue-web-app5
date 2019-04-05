@@ -6,7 +6,7 @@ import phoneRecordNew from './components/phoneRecordNew.vue'
 import phoneRecordEdit from './components/phoneRecordEdit.vue'
 import prospects from './components/prospects.vue'
 import ProspectsNew from './components/prospectsNew.vue'
-import prospectsEdit from './components/prespectsEdit.vue'
+import prospectsEdit from './components/prospectsEdit.vue'
 
 Vue.use(Router)
 
