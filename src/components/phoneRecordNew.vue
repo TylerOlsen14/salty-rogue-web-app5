@@ -3,22 +3,24 @@
         <h3>New Phone Record</h3>
         <div class="row">
             <form @submit.prevent='saveRecord' class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="datetime" v-model="time" required><!-- Going to automate this one -->
-                        <label>Time</label>
+                <div class="data1">
+                    <div class="row">
+                        <div class="input-field col s12" id="inputLabel">
+                            <label>Time: </label>
+                            <input type="datetime" v-model="time" id="text-input" required><!-- Going to automate this one -->
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" v-model="name" required>
-                        <label>Name</label>
+                    <div class="row">
+                        <div class="input-field col s12" id="inputLabel">
+                            <label>Name: </label>
+                            <input type="text" v-model="name" id="text-input" required>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" v-model="property" required>
-                        <label>Property</label>
+                    <div class="row">
+                        <div class="input-field col s12" id="inputLabel">
+                            <label>Property: </label>
+                            <input type="text" v-model="property" id="text-input" required>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -73,5 +75,26 @@ export default {
 <style>
 #container{
     background-color: white;
+}
+.data1{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+}
+#inputLabel{
+    display: flex;
+    align-self: flex-start;
+    width: 100px;
+}
+input{
+    display: flex;
+    align-self:flex-end;
+}
+form{
+    margin: auto;
+    width: 85%;
+    
 }
 </style>

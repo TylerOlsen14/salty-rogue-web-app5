@@ -10,16 +10,15 @@
 </template>
 
 <script>
-import navbar from './components/navbar';
-import db from './components/firebaseInit';
+import navbar from './components/navbar'
+import db from './components/firebaseInit'
 export default {
   name: 'app',
   components: {
-    navbar,
+    navbar
   }
 }
 </script>
-
 
 <style>
 #app {

@@ -14,6 +14,14 @@
                         <h5>{{phoneRecord.name}}</h5>
                         <h6>{{phoneRecord.time}}</h6>
                         <h6>{{phoneRecord.property}}</h6>
+                        <div>
+                            <router-link v-bind:to="{name: 'phoneRecordEdit', params: {time: time}}">
+                                <button type="button" id="edit">
+                                    <!-- <label for="edit">Edit</label> -->
+                                    Edit
+                                </button>
+                            </router-link>
+                        </div>
                     </div>
                     <div class="QA">
                         <div>Question: {{phoneRecord.question}}</div>
@@ -21,11 +29,6 @@
                     </div>
                 </li>
             </ul>
-            <router-link class="secondary-content">
-                <button type="button" class="btn btn-primary">
-                    Edit
-                </button>
-            </router-link>
         </div>
     </div>
 </template>
@@ -61,6 +64,11 @@ export default {
 button{
     margin: 10px;
 }
+#edit{
+    width: 50px;
+    height: 30px;
+    color: brown;
+}
 .topbar{
     margin: auto;
     text-align: center;
@@ -86,7 +94,8 @@ li{
 }
 .card-title{
     grid-column: 0 / 1;
-    width: 45%;
+    display: flex;
+    flex-direction: column;
 }
 .qa{
     grid-column: 1 / 2;
@@ -99,5 +108,8 @@ li{
 }
 h5{
     float: left;
+}
+.btn{
+
 }
 </style>

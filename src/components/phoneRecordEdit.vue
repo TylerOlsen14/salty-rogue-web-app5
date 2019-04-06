@@ -19,14 +19,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    Question
+                    <label for="question">
+                        Question
+                    </label>
                     <div class="input-field">
                         <!-- <textarea type="text" v-model="question" cols="30" rows="10" v-model="question" required></textarea> -->
                         <textarea type="text" v-model="question" cols="30" rows="10" required></textarea>
                     </div>
                 </div>
                 <div class="row">
-                    Resolution
+                    <label for="resolution">
+                        Resolution
+                    </label>
                     <div class="input-field">
                         <!-- <textarea type="text" v-model="resolution" cols="30" rows="10" v-model="resolution" required></textarea> -->
                         <textarea type="text" v-model="resolution" cols="30" rows="10" required></textarea>
@@ -75,7 +79,7 @@ export default {
             db.collection('students').where('student_id', '==', this.$route.params.student_id).get()
             .then(querySnapshot => {
                 querySnapshot.forEach(doc => {
-                    this.time = doc.data().student_id
+                    this.time = doc.data().time
                     this.name = doc.data().name
                     this.property = doc.data().property
                     this.question = doc.data().question
