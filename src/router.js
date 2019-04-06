@@ -34,7 +34,7 @@ export default new Router({
     },
     {
       path: '/phoneRecordNew',
-      name: 'phoneRecordsNew',
+      name: 'phoneRecordNew',
       component: phoneRecordNew
     },
     {

@@ -1,7 +1,7 @@
-import firebase from 'firebase';
-import 'firebase/firestore'
+// import firebase from 'firebase';
+// import 'firebase/firestore'
 
-const firebaseConfig = {
+export default {
     apiKey: "AIzaSyD5kJDsNUavyacmRVwP9HvaZD7d4o4qX2Q",
     authDomain: "salty-rogue.firebaseapp.com",
     databaseURL: "https://salty-rogue.firebaseio.com",
@@ -10,4 +10,4 @@ const firebaseConfig = {
     messagingSenderId: "293014247485"
   };
   // firebase.initializeApp(config);
-  export default firebaseConfig;
+  // export default firebaseConfig;

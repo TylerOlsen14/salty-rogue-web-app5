@@ -2,10 +2,10 @@
     <div id="container" class="collection with-header">
         <h3>New Phone Record</h3>
         <div class="row">
-            <form @submit.prevent="saveRecord" class="col s12">
+            <form @submit.prevent='saveRecord' class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="number" v-model="time" required><!-- Going to automate this one -->
+                        <input type="datetime" v-model="time" required><!-- Going to automate this one -->
                         <label>Time</label>
                     </div>
                 </div>
@@ -55,9 +55,10 @@ export default {
     },
     methods: {
         saveRecord() {
-            db.collection('phoneRecords').add({
+            db.collection('PhoneRecords').add({
                 time: this.time,
                 name: this.name,
+                property: this.property,
                 question: this.question,
                 resolution: this.resolution
             })
