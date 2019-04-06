@@ -68,25 +68,31 @@ button{
 .card-group{
     width: 95%;
     margin: auto;
+    
 }
 ul{ border: 1px solid black;
     width: 85%;
     text-align: left;
-    margin: 25px;
+    margin: auto;
+    margin-bottom: 5px;
     display: flex;
     padding: 1%
 }
 li{
     list-style: none;
-    display: flex;
-    flex-direction: 
+    display: grid;
+    grid-template-columns: 25% 75%;
+    width: 90%;
 }
 .card-title{
+    grid-column: 0 / 1;
     width: 45%;
 }
 .qa{
-    flex-direction: column;
+    grid-column: 1 / 2;
     align-self: flex-end;
+    align-content: flex-end;
+    width: 55%;
 }
 .text-muted{
     float: right;
